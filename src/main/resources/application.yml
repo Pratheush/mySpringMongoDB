@@ -1,0 +1,28 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  data:
+    mongodb:
+      authentication-database: admin
+      database: Productsdb
+      username: admin
+      password: password
+      host: localhost
+      port: 27000
+  mongodb:
+    embedded:
+      version: 3.4.7
+      storage:
+        database-dir: /home/pratheush/jlab/my_idea_projects/MySpringMongodb/mymongodata
+
+  #spring.servlet.multipart.max-file-size=256MB
+  #spring.servlet.multipart.max-request-size=256MB
+  #spring.servlet.multipart.enabled=true
+  # we need to define the configuration of image like size when we are working with MultipartFile so define the configuration in application.properties
+  spring:
+    servlet:
+      multipart:
+        max-file-size: 256MB
+        max-request-size: 256MB
+        enabled: true
